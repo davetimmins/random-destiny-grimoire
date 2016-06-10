@@ -1,10 +1,10 @@
 'use strict';
 
-System.register(['bootstrap'], function (_export, _context) {
+System.register(['fetch'], function (_export, _context) {
   "use strict";
 
   return {
-    setters: [function (_bootstrap) {}],
+    setters: [function (_fetch) {}],
     execute: function () {
       function configure(aurelia) {
         aurelia.use.standardConfiguration().developmentLogging();

@@ -1,4 +1,4 @@
-import 'bootstrap';
+import 'fetch';
 
 export function configure(aurelia) {
   aurelia.use
