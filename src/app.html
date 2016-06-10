@@ -1,0 +1,18 @@
+<template>
+  <section class="au-animate">
+    <div>
+      <h1 innerhtml.bind='title'></h1>
+    </div>
+    <div class="wrapper">
+      <div id="grim-img">
+        <img src='http://www.bungie.net${card.highResolution.image.sheetPath}' />
+      </div>
+      <div id="grim-text" data-bg-text="${themeName}">
+        <p innerhtml.bind='card.cardDescription'></p>
+      </div>
+    </div>
+    <div id="progressBar" class="platform-view-hidden" title="Countdown to sending the platform schedule to Frontline">
+      <div></div>
+    </div>
+  </section>
+</template>
