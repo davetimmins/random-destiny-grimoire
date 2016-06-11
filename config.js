@@ -224,7 +224,11 @@ System.config({
     "app-build.js": [
       "app.html!github:systemjs/plugin-text@0.0.3.js",
       "app.js",
-      "main.js"
+      "card.html!github:systemjs/plugin-text@0.0.3.js",
+      "card.js",
+      "main.js",
+      "random.html!github:systemjs/plugin-text@0.0.3.js",
+      "random.js"
     ],
     "aurelia.js": [
       "github:github/fetch@0.11.1.js",
@@ -317,12 +321,16 @@ System.config({
     ]
   },
   depCache: {
-    "app.js": [
+    "card.js": [
       "aurelia-framework",
       "aurelia-fetch-client"
     ],
     "main.js": [
       "fetch"
+    ],
+    "random.js": [
+      "aurelia-framework",
+      "aurelia-fetch-client"
     ]
   }
 });
