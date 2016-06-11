@@ -87,14 +87,16 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
           }
 
           var progressBarWidth = timeleft * $element.width() / timetotal;
-          $element.find('div').animate({ width: progressBarWidth }, timeleft === timetotal ? 0 : 1000, 'linear');
+          $element.find('div').animate({
+            width: progressBarWidth
+          }, timeleft === timetotal ? 0 : 200, 'linear');
 
           if (timeleft > -1) {
             $('#progressBar').show();
             var self = this;
             this.progressTimeout = setTimeout(function () {
-              self.progress(timeleft - 1, timetotal, $element, false);
-            }, 1000);
+              self.progress(timeleft - 0.2, timetotal, $element, false);
+            }, 200);
           } else {
             $('#progressBar').hide();
             this.updateCard();

@@ -1,8 +1,15 @@
 //import {computedFrom} from 'aurelia-framework';
-import {inject} from 'aurelia-framework';
-import {HttpClient, json} from 'aurelia-fetch-client';
+import {
+  inject
+}
+from 'aurelia-framework';
+import {
+  HttpClient, json
+}
+from 'aurelia-fetch-client';
 
-@inject(HttpClient)
+@
+inject(HttpClient)
 export class CardView {
 
   themes = null;
@@ -10,10 +17,10 @@ export class CardView {
   cardName = '';
   themeName = '';
   http = null;
- progressTimeout = null;
+  progressTimeout = null;
 
   constructor(httpClient) {
-    this.http = httpClient;    
+    this.http = httpClient;
   }
 
   attached() {
@@ -22,7 +29,7 @@ export class CardView {
       .fetch('data/grimoire.json')
       .then(response => response.json())
       .then(themeData => {
-        this.themes = themeData.Response.themeCollection;        
+        this.themes = themeData.Response.themeCollection;
         this.updateCard();
       })
       .catch(error => {
@@ -35,13 +42,15 @@ export class CardView {
     $('#progressBar').hide();
     const theme = this.themes[Math.floor(Math.random() * this.themes.length)];
     this.themeName = theme.themeName;
-    const page = theme.pageCollection[Math.floor(Math.random() * theme.pageCollection.length)];
-    this.card = page.cardCollection[Math.floor(Math.random() * page.cardCollection.length)];
+    const page = theme.pageCollection[Math.floor(Math.random() * theme.pageCollection
+      .length)];
+    this.card = page.cardCollection[Math.floor(Math.random() * page.cardCollection
+      .length)];
     this.cardName = this.card.cardName;
 
     document.getElementById('body').className = 'color-' + this.card.rarity;
 
-    var secs = (this.card.cardDescription.split(" ").length / 220) * 60;   
+    var secs = (this.card.cardDescription.split(" ").length / 220) * 60;
     this.progress(secs, secs, $('#progressBar'), true)
   }
 
@@ -53,16 +62,17 @@ export class CardView {
     }
 
     var progressBarWidth = timeleft * $element.width() / timetotal;
-    $element.find('div').animate({ width: progressBarWidth }, timeleft === timetotal ? 0 : 1000, 'linear');
+    $element.find('div').animate({
+      width: progressBarWidth
+    }, timeleft === timetotal ? 0 : 200, 'linear');
 
     if (timeleft > -1) {
       $('#progressBar').show();
       var self = this;
-      this.progressTimeout = setTimeout(function () {
-        self.progress(timeleft - 1, timetotal, $element, false);
-      }, 1000);
-    }
-    else {
+      this.progressTimeout = setTimeout(function() {
+        self.progress(timeleft - 0.2, timetotal, $element, false);
+      }, 200);
+    } else {
       $('#progressBar').hide();
       this.updateCard();
     }
