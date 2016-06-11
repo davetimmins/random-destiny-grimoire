@@ -63,7 +63,7 @@ export class RandomCardView {
         height: '100%'
       },
       from: {
-        color: '#e57373'
+        color: '#f44336'
       },
       to: {
         color: '#2196F3'
