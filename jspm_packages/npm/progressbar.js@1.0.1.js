@@ -1,0 +1,1 @@
+module.exports = require("npm:progressbar.js@1.0.1/src/main");

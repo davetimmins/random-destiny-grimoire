@@ -132,17 +132,10 @@ p {
 #progressBar {
   width: 100%;
   position: fixed;
-  top: 0;
-  left: 0;
   height: 6px;
-  background-color: #1565C0;
+  top: 0;
 }
-#progressBar div {
-  height: 100%;
-  padding: 0 6px;
-  width: 100%;
-  background-color: #2196F3;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+
+#progressBar svg {
+  position: absolute;
 }
