@@ -3,8 +3,11 @@ import 'fetch';
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
-    .developmentLogging();
-
+    .developmentLogging()
+    .plugin('aurelia-materialize-bridge',
+      bridge => bridge
+      .useColors()
+      .useFooter());
   //Uncomment the line below to enable animation.
   //aurelia.use.plugin('aurelia-animator-css');
   //if the css animator is enabled, add swap-order="after" to all router-view elements

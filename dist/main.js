@@ -7,7 +7,10 @@ System.register(['fetch'], function (_export, _context) {
     setters: [function (_fetch) {}],
     execute: function () {
       function configure(aurelia) {
-        aurelia.use.standardConfiguration().developmentLogging();
+        aurelia.use.standardConfiguration().developmentLogging().plugin('aurelia-materialize-bridge', function (bridge) {
+          return bridge.useColors().useFooter();
+        });
+
 
         aurelia.start().then(function () {
           return aurelia.setRoot();

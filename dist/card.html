@@ -1,16 +1,33 @@
 <template>
   <section class="au-animate">
-    <div>
-      <h1 innerhtml.bind='title'></h1>
+    <md-colors md-primary-color="${color}"></md-colors>
+    <div class='card-content container'>
+      <div class="row">
+        <h1 innerhtml.bind='title'></h1>
+      </div>
+      <div class="row">
+        <div id="grim-img">
+          <img src='http://www.bungie.net${card.highResolution.image.sheetPath}' />
+        </div>
+        <div id="grim-text" data-bg-text="${themeName}">
+          <p innerhtml.bind='card.cardDescription'></p>
+        </div>
+      </div>
     </div>
-    <div class="wrapper">
-      <div id="grim-img">
-        <img src='http://www.bungie.net${card.highResolution.image.sheetPath}' />
-      </div>
-      <div id="grim-text" data-bg-text="${themeName}">
-        <p innerhtml.bind='card.cardDescription'></p>
-        <a route-href="route: random;"><i class="glyphicon glyphicon-link"></i><span>Show me a random card</span></a>
-      </div>
+    <div>
+      <footer md-footer style="padding-left: 0;">
+        <div class="container">
+            <div class="row">
+              <a class="grey-text text-lighten-4 right" route-href="route: random;"><i class="glyphicon glyphicon-refresh"></i><span> New Random card</span></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+          <span><i class="glyphicon glyphicon-copyright-mark"></i> 2016 dave timmins</span>
+          <a class="grey-text text-lighten-4 right" href="https://github.com/davetimmins/random-destiny-grimoire">GitHub</a>
+          </div>
+        </div>
+      </footer>
     </div>
   </section>
 </template>

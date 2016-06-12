@@ -47,6 +47,7 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
           this.themeName = '';
           this.http = null;
           this.id = '';
+          this.color = '#2196F3';
 
           this.http = httpClient;
         }
@@ -75,6 +76,15 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
                     self.card = card;
                     self.cardName = card.cardName;
                     document.getElementById('body').className = 'color-' + card.rarity;
+                    if (card.rarity === 1) {
+                      self.color = '#2196F3';
+                    }
+                    if (card.rarity === 2) {
+                      self.color = '#4A148C';
+                    }
+                    if (card.rarity === 3) {
+                      self.color = '#FF6F00';
+                    }
                     break;
                   }
                 }

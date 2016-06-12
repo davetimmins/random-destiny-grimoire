@@ -18,6 +18,7 @@ export class CardView {
   themeName = '';
   http = null;
   id = '';
+  color = '#2196F3';
 
   constructor(httpClient) {
     this.http = httpClient;
@@ -51,6 +52,15 @@ export class CardView {
                 self.cardName = card.cardName;
                 document.getElementById('body').className = 'color-' + card
                   .rarity;
+                if (card.rarity === 1) {
+                  self.color = '#2196F3';
+                }
+                if (card.rarity === 2) {
+                  self.color = '#4A148C';
+                }
+                if (card.rarity === 3) {
+                  self.color = '#FF6F00';
+                }
                 break;
               }
             }

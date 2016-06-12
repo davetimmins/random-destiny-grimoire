@@ -49,6 +49,7 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
           this.themeName = '';
           this.http = null;
           this.bar = null;
+          this.color = '#2196F3';
 
           this.http = httpClient;
         }
@@ -68,6 +69,7 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
 
         RandomCardView.prototype.updateCard = function updateCard() {
 
+          window.scrollTo(0, 0);
           var theme = this.themes[Math.floor(Math.random() * this.themes.length)];
           this.themeName = theme.themeName;
           var page = theme.pageCollection[Math.floor(Math.random() * theme.pageCollection.length)];
@@ -76,15 +78,29 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
 
           document.getElementById('body').className = 'color-' + this.card.rarity;
 
-          var secs = this.card.cardDescription.split(" ").length / 220 * 60;
+          var secs = Math.max(this.card.cardDescription.split(" ").length / 220 * 60, 8);
 
           if (this.bar !== null) {
             this.bar.destroy();
           }
+
+          var colorTo = '#2196F3';
+          if (this.card.rarity === 1) {
+            this.color = '#2196F3';
+          }
+          if (this.card.rarity === 2) {
+            this.color = '#4A148C';
+            colorTo = '#4A148C';
+          }
+          if (this.card.rarity === 3) {
+            this.color = '#FF6F00';
+            colorTo = '#FF6F00';
+          }
+
           this.bar = new ProgressBar.Line(document.getElementById('progressBar'), {
             duration: secs * 1000,
-            color: '#e57373',
-            trailColor: '#1565C0',
+            color: '#f44336',
+            trailColor: '#EEEEEE',
             svgStyle: {
               width: '100%',
               height: '100%'
@@ -93,19 +109,23 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
               color: '#f44336'
             },
             to: {
-              color: '#2196F3'
+              color: colorTo
             },
             step: function step(state, bar) {
               bar.path.setAttribute('stroke', state.color);
             }
           });
           this.bar.set(1.0);
-          this.bar.animate(0.0);
-
           var self = this;
-          setTimeout(function () {
+          this.bar.animate(0.0, {}, function () {
             self.updateCard();
-          }, secs * 1000);
+          });
+        };
+
+        RandomCardView.prototype.detached = function detached() {
+          if (this.bar !== null) {
+            this.bar.destroy();
+          }
         };
 
         _createClass(RandomCardView, [{
