@@ -49,6 +49,7 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
           this.id = '';
           this.color = '#c3c3c3';
           this.shareHref = '';
+          this.encodedCardName = '';
 
           this.http = httpClient;
         }
@@ -74,6 +75,7 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
 
                   if (card.cardId == self.id) {
                     self.shareHref = encodeURIComponent(window.location.href);
+                    self.encodedCardName = encodeURIComponent(card.cardName);
                     self.themeName = theme.themeName;
                     self.card = card;
                     self.cardName = card.cardName;
