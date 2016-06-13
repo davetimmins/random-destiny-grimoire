@@ -25,6 +25,9 @@ a:link {
    text-decoration: none;
    font-size: 14pt;
 }
+a:visited {
+   color:inherit;
+}
 a:hover {
    text-decoration: underline;
 }

@@ -60,10 +60,10 @@ export class CardView {
                   self.color = '#2196F3';
                 }
                 if (card.rarity === 2) {
-                  self.color = '#4A148C';
+                  self.color = '#673AB7';
                 }
                 if (card.rarity === 3) {
-                  self.color = '#FF6F00';
+                  self.color = '#FF9800';
                 }
                 break;
               }

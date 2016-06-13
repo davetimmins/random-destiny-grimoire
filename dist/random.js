@@ -90,12 +90,12 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
             this.color = '#2196F3';
           }
           if (this.card.rarity === 2) {
-            this.color = '#4A148C';
-            colorTo = '#4A148C';
+            this.color = '#673AB7';
+            colorTo = '#673AB7';
           }
           if (this.card.rarity === 3) {
-            this.color = '#FF6F00';
-            colorTo = '#FF6F00';
+            this.color = '#FF9800';
+            colorTo = '#FF9800';
           }
 
           this.bar = new ProgressBar.Line(document.getElementById('progressBar'), {
