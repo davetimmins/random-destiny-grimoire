@@ -19,6 +19,7 @@ export class CardView {
   http = null;
   id = '';
   color = '#c3c3c3';
+  shareHref = '';
 
   constructor(httpClient) {
     this.http = httpClient;
@@ -47,6 +48,7 @@ export class CardView {
               var card = page.cardCollection[k];
 
               if (card.cardId == self.id) {
+                self.shareHref = encodeURIComponent(window.location.href);
                 self.themeName = theme.themeName;
                 self.card = card;
                 self.cardName = card.cardName;

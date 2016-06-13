@@ -50,6 +50,7 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
           this.http = null;
           this.bar = null;
           this.color = '#c3c3c3';
+          this.shareHref = encodeURIComponent(window.location.href);
 
           this.http = httpClient;
         }

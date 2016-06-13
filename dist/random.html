@@ -24,6 +24,12 @@
             <div class="row">
               <a class="grey-text text-lighten-4 right" if.bind="card" route-href="route: card; params.bind: {id:card.cardId}"><span class="octicon octicon-link"></span><span> Permalink</span></a>
             </div>
+            <div class="row grey-text text-lighten-4 right">
+              <span>Share on</span>
+              <a target="_blank" href="https://twitter.com/intent/tweet?url=${shareHref}&text=Random Destiny Grimoire&via=davetimmins">Twitter</a>
+              <span> or </span>
+              <a target="_blank" href="https://facebook.com/sharer.php?u=${shareHref}">Facebook</a>
+            </div>
         </div>
         <div class="footer-copyright">
           <div class="container">

@@ -48,6 +48,7 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
           this.http = null;
           this.id = '';
           this.color = '#c3c3c3';
+          this.shareHref = '';
 
           this.http = httpClient;
         }
@@ -72,6 +73,7 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
                   var card = page.cardCollection[k];
 
                   if (card.cardId == self.id) {
+                    self.shareHref = encodeURIComponent(window.location.href);
                     self.themeName = theme.themeName;
                     self.card = card;
                     self.cardName = card.cardName;

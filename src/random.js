@@ -19,6 +19,7 @@ export class RandomCardView {
   http = null;
   bar = null;
   color = '#c3c3c3';
+  shareHref = encodeURIComponent(window.location.href);
 
   constructor(httpClient) {
     this.http = httpClient;
