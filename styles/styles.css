@@ -39,9 +39,6 @@ img {
   width: auto\9;
   /* ie8 */
 }
-.glyphicon {
-  opacity: 0.5;
-}
 #grim-img {
   float: left;
   width: 40%;

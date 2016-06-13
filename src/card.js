@@ -18,7 +18,7 @@ export class CardView {
   themeName = '';
   http = null;
   id = '';
-  color = '#2196F3';
+  color = '#c3c3c3';
 
   constructor(httpClient) {
     this.http = httpClient;

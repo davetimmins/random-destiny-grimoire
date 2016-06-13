@@ -49,7 +49,7 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
           this.themeName = '';
           this.http = null;
           this.bar = null;
-          this.color = '#2196F3';
+          this.color = '#c3c3c3';
 
           this.http = httpClient;
         }
@@ -100,7 +100,7 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
           this.bar = new ProgressBar.Line(document.getElementById('progressBar'), {
             duration: secs * 1000,
             color: '#f44336',
-            trailColor: '#EEEEEE',
+            trailColor: '#e9e9e9',
             svgStyle: {
               width: '100%',
               height: '100%'

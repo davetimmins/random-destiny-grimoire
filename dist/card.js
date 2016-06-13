@@ -47,7 +47,7 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
           this.themeName = '';
           this.http = null;
           this.id = '';
-          this.color = '#2196F3';
+          this.color = '#c3c3c3';
 
           this.http = httpClient;
         }

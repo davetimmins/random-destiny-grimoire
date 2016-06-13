@@ -19,16 +19,16 @@
       <footer md-footer style="padding-left: 0;">
         <div class="container">
             <div class="row">
-              <a class="grey-text text-lighten-4 right" click.trigger="updateCard()"><i class="glyphicon glyphicon-refresh"></i><span> New Random card</span></a>
+              <a class="grey-text text-lighten-4 right" click.trigger="updateCard()"><span class="octicon octicon-sync"></span> New Random card</span></a>
             </div>
             <div class="row">
-              <a class="grey-text text-lighten-4 right" if.bind="card" route-href="route: card; params.bind: {id:card.cardId}"><i class="glyphicon glyphicon-link"></i><span> Permalink</span></a>
+              <a class="grey-text text-lighten-4 right" if.bind="card" route-href="route: card; params.bind: {id:card.cardId}"><span class="octicon octicon-link"></span><span> Permalink</span></a>
             </div>
         </div>
         <div class="footer-copyright">
           <div class="container">
-          <span><i class="glyphicon glyphicon-copyright-mark"></i> 2016 dave timmins</span>
-          <a class="grey-text text-lighten-4 right" href="https://github.com/davetimmins/random-destiny-grimoire">GitHub</a>
+          <span>&copy; 2016 dave timmins</span>
+          <a class="grey-text text-lighten-4 right" href="https://github.com/davetimmins/random-destiny-grimoire"><span class="octicon octicon-logo-github"></span></a>
           </div>
         </div>
       </footer>

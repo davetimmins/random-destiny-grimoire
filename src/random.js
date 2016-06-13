@@ -18,7 +18,7 @@ export class RandomCardView {
   themeName = '';
   http = null;
   bar = null;
-  color = '#2196F3';
+  color = '#c3c3c3';
 
   constructor(httpClient) {
     this.http = httpClient;
@@ -74,7 +74,7 @@ export class RandomCardView {
     this.bar = new ProgressBar.Line(document.getElementById('progressBar'), {
       duration: secs * 1000,
       color: '#f44336',
-      trailColor: '#EEEEEE',
+      trailColor: '#e9e9e9',
       svgStyle: {
         width: '100%',
         height: '100%'
