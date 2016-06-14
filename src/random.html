@@ -23,13 +23,13 @@
       <footer md-footer style="padding-left: 0;">
         <div class="container">
             <div class="row">
-              <a class="grey-text text-lighten-4 right" click.trigger="updateCard()"><span class="octicon octicon-sync"></span> New random card</span></a>
+              <a class="grey-text text-lighten-4 right" click.trigger="updateCard()"><span class="octicon octicon-sync"></span> new random card</span></a>
             </div>
             <div class="row">
-              <a class="grey-text text-lighten-4 right" if.bind="card" route-href="route: card; params.bind: {id:card.cardId}"><span class="octicon octicon-link"></span><span> Permalink</span></a>
+              <a class="grey-text text-lighten-4 right" if.bind="card" route-href="route: card; params.bind: {id:card.cardId}"><span class="octicon octicon-link"></span><span> permalink</span></a>
             </div>
             <div class="row grey-text text-lighten-4 right">
-              <span>Share on</span>
+              <span>share on</span>
               <a target="_blank" href="https://twitter.com/intent/tweet?url=${shareHref}&text=Random Destiny Grimoire&via=davetimmins">Twitter</a>
               <span> or </span>
               <a target="_blank" href="https://facebook.com/sharer.php?u=${shareHref}">Facebook</a>
