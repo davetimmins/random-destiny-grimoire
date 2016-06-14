@@ -20,6 +20,7 @@ export class RandomCardView {
   bar = null;
   color = '#c3c3c3';
   shareHref = encodeURIComponent(window.location.href);
+  timerPlaying = true;
 
   constructor(httpClient) {
     this.http = httpClient;
@@ -27,6 +28,11 @@ export class RandomCardView {
 
   attached() {
 
+    if (localStorage.rdgTimerPlaying) {
+      this.timerPlaying = (localStorage.rdgTimerPlaying == "true");
+    }
+
+    var storedPlaying = localStorage.getItem("rdgTimerPlaying");
     this.http
       .fetch('data/grimoire.json')
       .then(response => response.json())
@@ -52,8 +58,8 @@ export class RandomCardView {
 
     document.getElementById('body').className = 'color-' + this.card.rarity;
 
-    var secs = Math.max((this.card.cardDescription.split(" ").length / 220) *
-      60, 8);
+    var secs = Math.max((this.card.cardDescription.split(" ").length / 200) *
+      60, 10);
 
     if (this.bar !== null) {
       this.bar.destroy();
@@ -91,10 +97,45 @@ export class RandomCardView {
       }
     });
     this.bar.set(1.0);
-    const self = this;
-    this.bar.animate(0.0, {}, function() {
-      self.updateCard()
-    }); // Number from 0.0 to 1.0
+
+    var timerStop = document.querySelector("#timerStop");
+    if (this.timerPlaying) {
+      timerStop.classList.add("hidden");
+      const self = this;
+      this.bar.animate(0.0, {}, function() {
+        self.updateCard()
+      });
+    } else {
+      timerStop.classList.remove("hidden");
+    }
+  }
+
+  toggleTimer() {
+
+    this.timerPlaying = !this.timerPlaying;
+    localStorage.setItem("rdgTimerPlaying", this.timerPlaying);
+
+    var timerStop = document.querySelector("#timerStop");
+    if (this.timerPlaying === true) {
+
+      timerStop.classList.add("hidden");
+
+      if (this.bar !== null) {
+        const self = this;
+        this.bar.animate(0.0, {
+          duration: this.bar._opts.duration * this.bar.value()
+        }, function() {
+          self.updateCard()
+        });
+      }
+    } else {
+
+      timerStop.classList.remove("hidden");
+
+      if (this.bar !== null) {
+        this.bar.stop();
+      }
+    }
   }
 
   detached() {

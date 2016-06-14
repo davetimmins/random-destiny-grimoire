@@ -2,6 +2,10 @@
   <section class="au-animate">
     <md-colors md-primary-color="${color}"></md-colors>
     <div id="progressBar"></div>
+    <div class="timerControl" click.trigger="toggleTimer()">
+      <span class="mega-octicon octicon-clock"></span>
+      <span id="timerStop" class="mega-octicon octicon-circle-slash"></span>
+    </div>
     <div class='card-content container'>
       <div class="row">
         <h1 innerhtml.bind='title'></h1>

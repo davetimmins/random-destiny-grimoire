@@ -51,6 +51,7 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
           this.bar = null;
           this.color = '#c3c3c3';
           this.shareHref = encodeURIComponent(window.location.href);
+          this.timerPlaying = true;
 
           this.http = httpClient;
         }
@@ -58,6 +59,11 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
         RandomCardView.prototype.attached = function attached() {
           var _this = this;
 
+          if (localStorage.rdgTimerPlaying) {
+            this.timerPlaying = localStorage.rdgTimerPlaying == "true";
+          }
+
+          var storedPlaying = localStorage.getItem("rdgTimerPlaying");
           this.http.fetch('data/grimoire.json').then(function (response) {
             return response.json();
           }).then(function (themeData) {
@@ -69,6 +75,7 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
         };
 
         RandomCardView.prototype.updateCard = function updateCard() {
+          var _this2 = this;
 
           window.scrollTo(0, 0);
           var theme = this.themes[Math.floor(Math.random() * this.themes.length)];
@@ -79,7 +86,7 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
 
           document.getElementById('body').className = 'color-' + this.card.rarity;
 
-          var secs = Math.max(this.card.cardDescription.split(" ").length / 220 * 60, 8);
+          var secs = Math.max(this.card.cardDescription.split(" ").length / 200 * 60, 10);
 
           if (this.bar !== null) {
             this.bar.destroy();
@@ -117,10 +124,50 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
             }
           });
           this.bar.set(1.0);
-          var self = this;
-          this.bar.animate(0.0, {}, function () {
-            self.updateCard();
-          });
+
+          var timerStop = document.querySelector("#timerStop");
+          if (this.timerPlaying) {
+            (function () {
+              timerStop.classList.add("hidden");
+              var self = _this2;
+              _this2.bar.animate(0.0, {}, function () {
+                self.updateCard();
+              });
+            })();
+          } else {
+            timerStop.classList.remove("hidden");
+          }
+        };
+
+        RandomCardView.prototype.toggleTimer = function toggleTimer() {
+          var _this3 = this;
+
+          this.timerPlaying = !this.timerPlaying;
+          localStorage.setItem("rdgTimerPlaying", this.timerPlaying);
+
+          var timerStop = document.querySelector("#timerStop");
+          if (this.timerPlaying === true) {
+
+            timerStop.classList.add("hidden");
+
+            if (this.bar !== null) {
+              (function () {
+                var self = _this3;
+                _this3.bar.animate(0.0, {
+                  duration: _this3.bar._opts.duration * _this3.bar.value()
+                }, function () {
+                  self.updateCard();
+                });
+              })();
+            }
+          } else {
+
+            timerStop.classList.remove("hidden");
+
+            if (this.bar !== null) {
+              this.bar.stop();
+            }
+          }
         };
 
         RandomCardView.prototype.detached = function detached() {

@@ -17,6 +17,9 @@ html, body {
   color: #FF6F00;
   background-color: #FFF9C4;
 }
+.hidden {
+  display: none;
+}
 a {
    cursor: pointer;
 }
@@ -133,4 +136,30 @@ p {
 
 #progressBar svg {
   position: absolute;
+}
+
+.timerControl {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+}
+
+.timerControl .mega-octicon {
+  position: absolute;
+  text-align: center;
+  left: -32px;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity .5s ease-out;
+  -moz-transition: opacity .5s ease-out;
+  -webkit-transition: opacity .5s ease-out;
+  -o-transition: opacity .5s ease-out;
+}
+
+.timerControl .mega-octicon:hover {
+  opacity: 1.0;
+}
+
+.octicon-circle-slash{
+  color: #b71c1c;
 }
