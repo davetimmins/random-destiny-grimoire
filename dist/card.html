@@ -1,39 +1,33 @@
 <template>
   <section class="au-animate">
     <md-colors md-primary-color="${color}"></md-colors>
-    <div class='card-content container'>
-      <div class="row">
+    <div class="content">   
+      <div class="row col">
         <h1 innerhtml.bind='title'></h1>
       </div>
       <div class="row">
-        <div id="grim-img">
+        <div class="col grim-img">
           <img src='http://www.bungie.net${card.highResolution.image.sheetPath}' />
         </div>
-        <div id="grim-text" data-bg-text="${themeName}">
+        <div class="col grim-text" data-bg-text="${themeName}">
           <p innerhtml.bind='card.cardDescription'></p>
         </div>
       </div>
-    </div>
-    <div>
-      <footer md-footer style="padding-left: 0;">
-        <div class="container">
-            <div class="row">
-              <a class="grey-text text-lighten-4 right" route-href="route: random;"><span class="octicon octicon-sync"></span> <span> show random card</span></a>
-            </div>
-            <div class="row grey-text text-lighten-4 right">
-              <span>share on</span>
-              <a target="_blank" href="https://twitter.com/intent/tweet?text=Grimoire Card :: ${encodedCardName}&via=davetimmins&url=${shareHref}">Twitter</a>
-              <span> or </span>
-              <a target="_blank" href="https://facebook.com/sharer.php?u=${shareHref}">Facebook</a>
-            </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">
-            <a href="http://davetimmins.com">&copy; 2016 dave timmins</a>
-            <a class="grey-text text-lighten-4 right" href="https://github.com/davetimmins/random-destiny-grimoire"><span class="octicon octicon-logo-github"></span></a>
-          </div>
-        </div>
-      </footer>
-    </div>
+    </div>    
+    <footer md-footer style="padding-left: 0;">      
+      <div class="clear text-pad">
+        <a class="grey-text text-lighten-4 right" route-href="route: random;"><span class="octicon octicon-sync"></span> <span> show random card</span></a>
+      </div>      
+      <div class="clear grey-text text-lighten-4 right text-pad extra-pad">
+        <span>share on</span>
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Grimoire Card :: ${encodedCardName}&via=davetimmins&url=${shareHref}">Twitter</a>
+        <span> or </span>
+        <a target="_blank" href="https://facebook.com/sharer.php?u=${shareHref}">Facebook</a>
+      </div>      
+      <div class="footer-copyright clear text-pad">        
+          <a href="http://davetimmins.com">&copy; 2016 dave timmins</a>
+          <a class="grey-text text-lighten-4 right" href="https://github.com/davetimmins/random-destiny-grimoire"><span class="octicon octicon-logo-github"></span></a>      
+      </div>
+    </footer>          
   </section>
 </template>

@@ -1,3 +1,20 @@
+/* Dead Simple Grid (c) 2015 Vladimir Agafonkin */
+
+.row .row { margin:  0 -1.5em; }
+.col      { padding: 0  1.5em; }
+
+.row:after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+@media only screen { .col {
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+}}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -47,28 +64,55 @@ img {
   width: auto\9;
   /* ie8 */
 }
-#grim-img {
-  float: left;
+
+.content {
+  max-width: 85%; 
+  margin: 0 auto; 
+}
+
+.grim-img {
+  
   width: 40%;
   max-width: 560px;
   min-width: 200px;
   padding: 0 8px 8px 8px;
   box-sizing: border-box;
 }
-#grim-text {
-  font-family: 'Lora', sans-serif;
-  overflow: hidden;
-  overflow-y: auto;
-  float: right;
+
+.grim-text {
+  font-family: 'Lora', sans-serif; 
   min-height: 170px;
   width: 60%;
   padding: 0 12px 12px 12px;
   box-sizing: border-box;
 }
+
 p {
   margin: 0;
 }
-@media screen and (max-width: 641px) {
+
+.clear {
+  clear: both;
+}
+
+.text-pad {
+  padding: 8px 20px;
+}
+
+.extra-pad {
+  padding-bottom: 18px;
+}
+
+footer.page-footer {
+    margin-top: 10px !important;
+    padding-top: 10px !important;
+}
+
+footer.page-footer .footer-copyright {
+  height: auto !important;
+}
+
+@media screen and (max-width: 610px) {
   html, body {
     overflow: auto;
   }
@@ -78,14 +122,18 @@ p {
   a:link {
      font-size: 14pt;
   }
-  #grim-img {
-    float: none;
-    width: auto;
+  .content { max-width: 96%; }
+  .grim-img {
+    width: 100%;
   }
-  #grim-text {
-    float: none;
-    width: auto;
-    max-height: 100%;
+  .grim-text {
+    width: 100%;
+  }
+  .text-pad {
+    padding: 8px 12px;
+  }
+  .extra-pad {
+    padding-bottom: 18px;
   }
 }
 .loading {
