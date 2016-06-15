@@ -119,6 +119,7 @@ footer.page-footer .footer-copyright {
   }
   h1 {
     font-size: 2em !important;
+    margin: 0.5em 0.2em 0.2em 0.2em !important;
   }
   a:link {
      font-size: 14pt;
