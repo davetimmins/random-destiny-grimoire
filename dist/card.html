@@ -1,19 +1,8 @@
 <template>
+  <require from="./card-detail.html"></require>
   <section class="au-animate">
     <md-colors md-primary-color="${color}"></md-colors>
-    <div class="content">   
-      <div class="row col">
-        <h1 innerhtml.bind='title'></h1>
-      </div>
-      <div class="row">
-        <div class="col grim-img">
-          <img src='http://www.bungie.net${card.highResolution.image.sheetPath}' />
-        </div>
-        <div class="col grim-text" data-bg-text="${themeName}">
-          <p innerhtml.bind='card.cardDescription'></p>
-        </div>
-      </div>
-    </div>    
+    <card-detail title="${title}" image-src="https://www.bungie.net${card.highResolution.image.sheetPath}" description="${card.cardDescription}"></card-detail>
     <footer md-footer style="padding-left: 0;">      
       <div class="clear text-pad">
         <a class="grey-text text-lighten-4 right" route-href="route: random;"><span class="octicon octicon-sync"></span> <span> show random card</span></a>

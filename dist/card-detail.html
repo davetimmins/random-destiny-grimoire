@@ -1,0 +1,15 @@
+<template bindable="title, imageSrc, description">
+  <div class="content">   
+    <div class="row col">
+      <h1 innerhtml.bind='title'></h1>
+    </div>
+    <div class="row">
+      <div class="col grim-img">
+        <img src='${imageSrc}' alt="grimoire card" />
+      </div>
+      <div class="col grim-text">
+        <p innerhtml.bind='description'></p>
+      </div>
+    </div>
+  </div>    
+</template>

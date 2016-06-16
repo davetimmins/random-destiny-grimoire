@@ -252,6 +252,7 @@ System.config({
     "app-build.js": [
       "app.html!github:systemjs/plugin-text@0.0.3.js",
       "app.js",
+      "card-detail.html!github:systemjs/plugin-text@0.0.3.js",
       "card.html!github:systemjs/plugin-text@0.0.3.js",
       "card.js",
       "main.js",

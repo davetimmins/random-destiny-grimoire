@@ -200,7 +200,7 @@ footer.page-footer .footer-copyright {
   position: absolute;
   text-align: center;
   left: -32px;
-  opacity: 0.4;
+  opacity: 0.25;
   cursor: pointer;
   transition: opacity .5s ease-out;
   -moz-transition: opacity .5s ease-out;
