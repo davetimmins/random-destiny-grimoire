@@ -21,12 +21,12 @@ System.config({
     "aurelia-loader-default": "npm:aurelia-loader-default@1.0.0-beta.2.0.0",
     "aurelia-logging-console": "npm:aurelia-logging-console@1.0.0-beta.2.0.0",
     "aurelia-materialize-bridge": "npm:aurelia-materialize-bridge@0.7.1",
-    "aurelia-pal-browser": "npm:aurelia-pal-browser@1.0.0-beta.3.0.0",
+    "aurelia-pal-browser": "npm:aurelia-pal-browser@1.0.0-beta.3.0.1",
     "aurelia-polyfills": "npm:aurelia-polyfills@1.0.0-beta.2.0.0",
     "aurelia-router": "npm:aurelia-router@1.0.0-beta.2.0.0",
-    "aurelia-templating-binding": "npm:aurelia-templating-binding@1.0.0-beta.2.0.0",
-    "aurelia-templating-resources": "npm:aurelia-templating-resources@1.0.0-beta.3.0.0",
-    "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0-beta.2.0.0",
+    "aurelia-templating-binding": "npm:aurelia-templating-binding@1.0.0-beta.2.0.1",
+    "aurelia-templating-resources": "npm:aurelia-templating-resources@1.0.0-beta.3.0.3",
+    "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0-beta.2.0.1",
     "babel": "npm:babel-core@5.8.38",
     "babel-runtime": "npm:babel-runtime@5.8.38",
     "bluebird": "npm:bluebird@3.4.0",
@@ -70,13 +70,13 @@ System.config({
     },
     "npm:aurelia-animator-css@1.0.0-beta.2.0.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.2.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0",
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.3.0.2"
     },
-    "npm:aurelia-binding@1.0.0-beta.2.0.5": {
+    "npm:aurelia-binding@1.0.0-beta.2.0.6": {
       "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.2.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.2.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0",
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.2.0.0"
     },
     "npm:aurelia-bootstrapper@1.0.0-beta.2.0.0": {
@@ -86,41 +86,41 @@ System.config({
       "aurelia-history-browser": "npm:aurelia-history-browser@1.0.0-beta.2.0.0",
       "aurelia-loader-default": "npm:aurelia-loader-default@1.0.0-beta.2.0.0",
       "aurelia-logging-console": "npm:aurelia-logging-console@1.0.0-beta.2.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0",
-      "aurelia-pal-browser": "npm:aurelia-pal-browser@1.0.0-beta.3.0.0",
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0",
+      "aurelia-pal-browser": "npm:aurelia-pal-browser@1.0.0-beta.3.0.1",
       "aurelia-polyfills": "npm:aurelia-polyfills@1.0.0-beta.2.0.0",
       "aurelia-router": "npm:aurelia-router@1.0.0-beta.2.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.3.0.2",
-      "aurelia-templating-binding": "npm:aurelia-templating-binding@1.0.0-beta.2.0.0",
-      "aurelia-templating-resources": "npm:aurelia-templating-resources@1.0.0-beta.3.0.0",
-      "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0-beta.2.0.0"
+      "aurelia-templating-binding": "npm:aurelia-templating-binding@1.0.0-beta.2.0.1",
+      "aurelia-templating-resources": "npm:aurelia-templating-resources@1.0.0-beta.3.0.3",
+      "aurelia-templating-router": "npm:aurelia-templating-router@1.0.0-beta.2.0.1"
     },
     "npm:aurelia-dependency-injection@1.0.0-beta.2.1.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.2.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0"
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0"
     },
     "npm:aurelia-event-aggregator@1.0.0-beta.2.0.0": {
       "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.2.0.0"
     },
     "npm:aurelia-framework@1.0.0-beta.2.0.0": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.2.0.5",
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.2.0.6",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.2.1.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0-beta.2.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.2.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.2.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0",
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0",
       "aurelia-path": "npm:aurelia-path@1.0.0-beta.2.0.0",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.2.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.3.0.2"
     },
     "npm:aurelia-history-browser@1.0.0-beta.2.0.0": {
       "aurelia-history": "npm:aurelia-history@1.0.0-beta.2.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0"
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0"
     },
     "npm:aurelia-loader-default@1.0.0-beta.2.0.0": {
       "aurelia-loader": "npm:aurelia-loader@1.0.0-beta.2.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.2.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0"
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0"
     },
     "npm:aurelia-loader@1.0.0-beta.2.0.0": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.2.0.0",
@@ -130,7 +130,7 @@ System.config({
       "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.2.0.0"
     },
     "npm:aurelia-materialize-bridge@0.7.1": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.2.0.5",
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.2.0.6",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.2.1.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.2.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.2.0.0",
@@ -140,13 +140,13 @@ System.config({
       "materialize": "github:Dogfalo/materialize@0.97.6"
     },
     "npm:aurelia-metadata@1.0.0-beta.2.0.0": {
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0"
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0"
     },
-    "npm:aurelia-pal-browser@1.0.0-beta.3.0.0": {
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0"
+    "npm:aurelia-pal-browser@1.0.0-beta.3.0.1": {
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0"
     },
     "npm:aurelia-polyfills@1.0.0-beta.2.0.0": {
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0"
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0"
     },
     "npm:aurelia-route-recognizer@1.0.0-beta.2.0.0": {
       "aurelia-path": "npm:aurelia-path@1.0.0-beta.2.0.0"
@@ -160,40 +160,40 @@ System.config({
       "aurelia-route-recognizer": "npm:aurelia-route-recognizer@1.0.0-beta.2.0.0"
     },
     "npm:aurelia-task-queue@1.0.0-beta.2.0.0": {
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0"
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0"
     },
-    "npm:aurelia-templating-binding@1.0.0-beta.2.0.0": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.2.0.5",
+    "npm:aurelia-templating-binding@1.0.0-beta.2.0.1": {
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.2.0.6",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.2.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.3.0.2"
     },
-    "npm:aurelia-templating-resources@1.0.0-beta.3.0.0": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.2.0.5",
+    "npm:aurelia-templating-resources@1.0.0-beta.3.0.3": {
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.2.0.6",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.2.1.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0-beta.2.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.2.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.2.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0",
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0",
       "aurelia-path": "npm:aurelia-path@1.0.0-beta.2.0.0",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.2.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.3.0.2"
     },
-    "npm:aurelia-templating-router@1.0.0-beta.2.0.0": {
+    "npm:aurelia-templating-router@1.0.0-beta.2.0.1": {
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.2.1.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.2.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.2.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0",
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0",
       "aurelia-path": "npm:aurelia-path@1.0.0-beta.2.0.0",
       "aurelia-router": "npm:aurelia-router@1.0.0-beta.2.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.3.0.2"
     },
     "npm:aurelia-templating@1.0.0-beta.3.0.2": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.2.0.5",
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.2.0.6",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.2.1.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0-beta.2.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.2.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.2.0.0",
-      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1.3.0",
+      "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.2.0.0",
       "aurelia-path": "npm:aurelia-path@1.0.0-beta.2.0.0",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.2.0.0"
     },
@@ -264,8 +264,8 @@ System.config({
       "github:github/fetch@0.11.1/fetch.js",
       "npm:aurelia-animator-css@1.0.0-beta.2.0.0.js",
       "npm:aurelia-animator-css@1.0.0-beta.2.0.0/aurelia-animator-css.js",
-      "npm:aurelia-binding@1.0.0-beta.2.0.5.js",
-      "npm:aurelia-binding@1.0.0-beta.2.0.5/aurelia-binding.js",
+      "npm:aurelia-binding@1.0.0-beta.2.0.6.js",
+      "npm:aurelia-binding@1.0.0-beta.2.0.6/aurelia-binding.js",
       "npm:aurelia-bootstrapper@1.0.0-beta.2.0.0.js",
       "npm:aurelia-bootstrapper@1.0.0-beta.2.0.0/aurelia-bootstrapper.js",
       "npm:aurelia-dependency-injection@1.0.0-beta.2.1.0.js",
@@ -290,10 +290,10 @@ System.config({
       "npm:aurelia-logging@1.0.0-beta.2.0.0/aurelia-logging.js",
       "npm:aurelia-metadata@1.0.0-beta.2.0.0.js",
       "npm:aurelia-metadata@1.0.0-beta.2.0.0/aurelia-metadata.js",
-      "npm:aurelia-pal-browser@1.0.0-beta.3.0.0.js",
-      "npm:aurelia-pal-browser@1.0.0-beta.3.0.0/aurelia-pal-browser.js",
-      "npm:aurelia-pal@1.0.0-beta.1.3.0.js",
-      "npm:aurelia-pal@1.0.0-beta.1.3.0/aurelia-pal.js",
+      "npm:aurelia-pal-browser@1.0.0-beta.3.0.1.js",
+      "npm:aurelia-pal-browser@1.0.0-beta.3.0.1/aurelia-pal-browser.js",
+      "npm:aurelia-pal@1.0.0-beta.2.0.0.js",
+      "npm:aurelia-pal@1.0.0-beta.2.0.0/aurelia-pal.js",
       "npm:aurelia-path@1.0.0-beta.2.0.0.js",
       "npm:aurelia-path@1.0.0-beta.2.0.0/aurelia-path.js",
       "npm:aurelia-polyfills@1.0.0-beta.2.0.0.js",
@@ -304,43 +304,44 @@ System.config({
       "npm:aurelia-router@1.0.0-beta.2.0.0/aurelia-router.js",
       "npm:aurelia-task-queue@1.0.0-beta.2.0.0.js",
       "npm:aurelia-task-queue@1.0.0-beta.2.0.0/aurelia-task-queue.js",
-      "npm:aurelia-templating-binding@1.0.0-beta.2.0.0.js",
-      "npm:aurelia-templating-binding@1.0.0-beta.2.0.0/aurelia-templating-binding.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/abstract-repeater.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/analyze-view-factory.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/array-repeat-strategy.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/aurelia-hide-style.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/aurelia-templating-resources.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/binding-mode-behaviors.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/binding-signaler.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/compose.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/css-resource.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/debounce-binding-behavior.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/dynamic-element.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/focus.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/hide.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/html-resource-plugin.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/html-sanitizer.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/if.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/map-repeat-strategy.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/null-repeat-strategy.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/number-repeat-strategy.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/repeat-strategy-locator.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/repeat-utilities.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/repeat.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/sanitize-html.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/set-repeat-strategy.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/show.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/signal-binding-behavior.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/throttle-binding-behavior.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/update-trigger-binding-behavior.js",
-      "npm:aurelia-templating-resources@1.0.0-beta.3.0.0/with.js",
-      "npm:aurelia-templating-router@1.0.0-beta.2.0.0.js",
-      "npm:aurelia-templating-router@1.0.0-beta.2.0.0/aurelia-templating-router.js",
-      "npm:aurelia-templating-router@1.0.0-beta.2.0.0/route-href.js",
-      "npm:aurelia-templating-router@1.0.0-beta.2.0.0/route-loader.js",
-      "npm:aurelia-templating-router@1.0.0-beta.2.0.0/router-view.js",
+      "npm:aurelia-templating-binding@1.0.0-beta.2.0.1.js",
+      "npm:aurelia-templating-binding@1.0.0-beta.2.0.1/aurelia-templating-binding.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/abstract-repeater.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/analyze-view-factory.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/array-repeat-strategy.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/aurelia-hide-style.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/aurelia-templating-resources.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/binding-mode-behaviors.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/binding-signaler.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/compose.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/css-resource.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/debounce-binding-behavior.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/dynamic-element.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/focus.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/hide.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/html-resource-plugin.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/html-sanitizer.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/if.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/map-repeat-strategy.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/null-repeat-strategy.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/number-repeat-strategy.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/repeat-strategy-locator.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/repeat-utilities.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/repeat.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/replaceable.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/sanitize-html.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/set-repeat-strategy.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/show.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/signal-binding-behavior.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/throttle-binding-behavior.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/update-trigger-binding-behavior.js",
+      "npm:aurelia-templating-resources@1.0.0-beta.3.0.3/with.js",
+      "npm:aurelia-templating-router@1.0.0-beta.2.0.1.js",
+      "npm:aurelia-templating-router@1.0.0-beta.2.0.1/aurelia-templating-router.js",
+      "npm:aurelia-templating-router@1.0.0-beta.2.0.1/route-href.js",
+      "npm:aurelia-templating-router@1.0.0-beta.2.0.1/route-loader.js",
+      "npm:aurelia-templating-router@1.0.0-beta.2.0.1/router-view.js",
       "npm:aurelia-templating@1.0.0-beta.3.0.2.js",
       "npm:aurelia-templating@1.0.0-beta.3.0.2/aurelia-templating.js",
       "npm:jquery@2.2.4.js",
