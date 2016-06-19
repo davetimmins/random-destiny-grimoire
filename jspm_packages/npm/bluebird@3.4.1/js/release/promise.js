@@ -146,6 +146,7 @@
     Promise.prototype.error = function(fn) {
       return this.caught(util.originatesFromRejection, fn);
     };
+    Promise.getNewLibraryCopy = module.exports;
     Promise.is = function(val) {
       return val instanceof Promise;
     };
