@@ -1,5 +1,5 @@
 import ProgressBar from 'progressbar.js';
-import { fetchGrimoire } from './data-service';
+import { fetchGrimoire } from 'data-service';
 
 export class RandomCardView {
 

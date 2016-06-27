@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['./data-service'], function (_export, _context) {
+System.register(['data-service'], function (_export, _context) {
   "use strict";
 
   var fetchGrimoire, _createClass, CardView;

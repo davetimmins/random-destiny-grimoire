@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['progressbar.js', './data-service'], function (_export, _context) {
+System.register(['progressbar.js', 'data-service'], function (_export, _context) {
   "use strict";
 
   var ProgressBar, fetchGrimoire, _createClass, RandomCardView;

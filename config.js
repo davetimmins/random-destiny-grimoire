@@ -351,7 +351,7 @@ System.config({
   },
   depCache: {
     "card.js": [
-      "./data-service"
+      "data-service"
     ],
     "data-service.js": [
       "aurelia-fetch-client",
@@ -359,7 +359,7 @@ System.config({
     ],
     "random.js": [
       "progressbar.js",
-      "./data-service"
+      "data-service"
     ]
   }
 });
