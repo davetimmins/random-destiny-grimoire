@@ -73,7 +73,7 @@ System.config({
       "aurelia-pal": "npm:aurelia-pal@1.0.0-rc.1.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.0.0-rc.1.0.0"
     },
-    "npm:aurelia-binding@1.0.0-rc.1.0.0": {
+    "npm:aurelia-binding@1.0.0-rc.1.0.2": {
       "aurelia-logging": "npm:aurelia-logging@1.0.0-rc.1.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-rc.1.0.0",
       "aurelia-pal": "npm:aurelia-pal@1.0.0-rc.1.0.0",
@@ -103,7 +103,7 @@ System.config({
       "aurelia-logging": "npm:aurelia-logging@1.0.0-rc.1.0.0"
     },
     "npm:aurelia-framework@1.0.0-rc.1.0.0": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-rc.1.0.0",
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-rc.1.0.2",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-rc.1.0.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0-rc.1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-rc.1.0.0",
@@ -130,7 +130,7 @@ System.config({
       "aurelia-logging": "npm:aurelia-logging@1.0.0-rc.1.0.0"
     },
     "npm:aurelia-materialize-bridge@0.7.1": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-rc.1.0.0",
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-rc.1.0.2",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-rc.1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-rc.1.0.0",
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-rc.1.0.0",
@@ -163,12 +163,12 @@ System.config({
       "aurelia-pal": "npm:aurelia-pal@1.0.0-rc.1.0.0"
     },
     "npm:aurelia-templating-binding@1.0.0-rc.1.0.0": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-rc.1.0.0",
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-rc.1.0.2",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-rc.1.0.0",
       "aurelia-templating": "npm:aurelia-templating@1.0.0-rc.1.0.0"
     },
     "npm:aurelia-templating-resources@1.0.0-rc.1.0.0": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-rc.1.0.0",
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-rc.1.0.2",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-rc.1.0.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0-rc.1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-rc.1.0.0",
@@ -188,7 +188,7 @@ System.config({
       "aurelia-templating": "npm:aurelia-templating@1.0.0-rc.1.0.0"
     },
     "npm:aurelia-templating@1.0.0-rc.1.0.0": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-rc.1.0.0",
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-rc.1.0.2",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-rc.1.0.0",
       "aurelia-loader": "npm:aurelia-loader@1.0.0-rc.1.0.0",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-rc.1.0.0",
@@ -255,6 +255,7 @@ System.config({
       "card-detail.html!github:systemjs/plugin-text@0.0.3.js",
       "card.html!github:systemjs/plugin-text@0.0.3.js",
       "card.js",
+      "data-service.js",
       "main.js",
       "random.html!github:systemjs/plugin-text@0.0.3.js",
       "random.js"
@@ -264,8 +265,8 @@ System.config({
       "github:github/fetch@0.11.1/fetch.js",
       "npm:aurelia-animator-css@1.0.0-rc.1.0.0.js",
       "npm:aurelia-animator-css@1.0.0-rc.1.0.0/aurelia-animator-css.js",
-      "npm:aurelia-binding@1.0.0-rc.1.0.0.js",
-      "npm:aurelia-binding@1.0.0-rc.1.0.0/aurelia-binding.js",
+      "npm:aurelia-binding@1.0.0-rc.1.0.2.js",
+      "npm:aurelia-binding@1.0.0-rc.1.0.2/aurelia-binding.js",
       "npm:aurelia-bootstrapper@1.0.0-rc.1.0.0.js",
       "npm:aurelia-bootstrapper@1.0.0-rc.1.0.0/aurelia-bootstrapper.js",
       "npm:aurelia-dependency-injection@1.0.0-rc.1.0.0.js",
@@ -350,16 +351,15 @@ System.config({
   },
   depCache: {
     "card.js": [
-      "aurelia-framework",
-      "aurelia-fetch-client"
+      "./data-service"
     ],
-    "main.js": [
+    "data-service.js": [
+      "aurelia-fetch-client",
       "fetch"
     ],
     "random.js": [
       "progressbar.js",
-      "aurelia-framework",
-      "aurelia-fetch-client"
+      "./data-service"
     ]
   }
 });

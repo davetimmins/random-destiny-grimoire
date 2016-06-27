@@ -12,7 +12,7 @@
   "github:github/fetch@0.11.1": {},
   "github:systemjs/plugin-text@0.0.3": {},
   "github:twbs/bootstrap@3.3.6": {
-    "jquery": "jspm:jquery"
+    "jquery": "jspm:jquery@2"
   },
   "github:jspm/nodelibs-path@0.1.0": {
     "path-browserify": "npm:path-browserify@0.0.0"
@@ -220,7 +220,7 @@
     "aurelia-task-queue": "npm:aurelia-task-queue@^1.0.0-rc.1.0.0",
     "aurelia-templating": "npm:aurelia-templating@^1.0.0-rc.1.0.0"
   },
-  "npm:aurelia-binding@1.0.0-rc.1.0.0": {
+  "npm:aurelia-binding@1.0.0-rc.1.0.2": {
     "aurelia-logging": "npm:aurelia-logging@^1.0.0-rc.1.0.0",
     "aurelia-metadata": "npm:aurelia-metadata@^1.0.0-rc.1.0.0",
     "aurelia-pal": "npm:aurelia-pal@^1.0.0-rc.1.0.0",

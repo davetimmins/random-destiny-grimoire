@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export, _context) {
+System.register(['./data-service'], function (_export, _context) {
   "use strict";
 
-  var inject, HttpClient, json, _createClass, _dec, _class, CardView;
+  var fetchGrimoire, _createClass, CardView;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -12,11 +12,8 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
   }
 
   return {
-    setters: [function (_aureliaFramework) {
-      inject = _aureliaFramework.inject;
-    }, function (_aureliaFetchClient) {
-      HttpClient = _aureliaFetchClient.HttpClient;
-      json = _aureliaFetchClient.json;
+    setters: [function (_dataService) {
+      fetchGrimoire = _dataService.fetchGrimoire;
     }],
     execute: function () {
       _createClass = function () {
@@ -37,21 +34,16 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
         };
       }();
 
-      _export('CardView', CardView = (_dec = inject(HttpClient), _dec(_class = function () {
-        function CardView(httpClient) {
+      _export('CardView', CardView = function () {
+        function CardView() {
           _classCallCheck(this, CardView);
 
-          this.themes = null;
           this.card = null;
           this.cardName = '';
           this.themeName = '';
-          this.http = null;
-          this.id = '';
           this.color = '#c3c3c3';
           this.shareHref = '';
           this.encodedCardName = '';
-
-          this.http = httpClient;
         }
 
         CardView.prototype.activate = function activate(params) {
@@ -59,13 +51,12 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
         };
 
         CardView.prototype.attached = function attached() {
-          var self = this;
-          this.http.fetch('data/grimoire.json').then(function (response) {
-            return response.json();
-          }).then(function (themeData) {
+          var _this = this;
 
-            for (var i = 0; i < themeData.Response.themeCollection.length; i++) {
-              var theme = themeData.Response.themeCollection[i];
+          fetchGrimoire().then(function (themeData) {
+
+            for (var i = 0; i < themeData.length; i++) {
+              var theme = themeData[i];
 
               for (var j = 0; j < theme.pageCollection.length; j++) {
                 var page = theme.pageCollection[j];
@@ -73,29 +64,27 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
                 for (var k = 0; k < page.cardCollection.length; k++) {
                   var card = page.cardCollection[k];
 
-                  if (card.cardId == self.id) {
-                    self.shareHref = encodeURIComponent(window.location.href);
-                    self.encodedCardName = encodeURIComponent(card.cardName);
-                    self.themeName = theme.themeName;
-                    self.card = card;
-                    self.cardName = card.cardName;
+                  if (card.cardId == _this.id) {
+                    _this.shareHref = encodeURIComponent(window.location.href);
+                    _this.encodedCardName = encodeURIComponent(card.cardName);
+                    _this.themeName = theme.themeName;
+                    _this.card = card;
+                    _this.cardName = card.cardName;
                     document.getElementById('body').className = 'color-' + card.rarity;
                     if (card.rarity === 1) {
-                      self.color = '#2196F3';
+                      _this.color = '#2196F3';
                     }
                     if (card.rarity === 2) {
-                      self.color = '#673AB7';
+                      _this.color = '#673AB7';
                     }
                     if (card.rarity === 3) {
-                      self.color = '#FF9800';
+                      _this.color = '#FF9800';
                     }
                     break;
                   }
                 }
               }
             }
-          }).catch(function (error) {
-            console.error(error);
           });
         };
 
@@ -107,7 +96,7 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
         }]);
 
         return CardView;
-      }()) || _class));
+      }());
 
       _export('CardView', CardView);
     }

@@ -1,9 +1,9 @@
 'use strict';
 
-System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'], function (_export, _context) {
+System.register(['progressbar.js', './data-service'], function (_export, _context) {
   "use strict";
 
-  var ProgressBar, inject, HttpClient, json, _createClass, _dec, _class, RandomCardView;
+  var ProgressBar, fetchGrimoire, _createClass, RandomCardView;
 
   function _classCallCheck(instance, Constructor) {
     if (!(instance instanceof Constructor)) {
@@ -14,11 +14,8 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
   return {
     setters: [function (_progressbarJs) {
       ProgressBar = _progressbarJs.default;
-    }, function (_aureliaFramework) {
-      inject = _aureliaFramework.inject;
-    }, function (_aureliaFetchClient) {
-      HttpClient = _aureliaFetchClient.HttpClient;
-      json = _aureliaFetchClient.json;
+    }, function (_dataService) {
+      fetchGrimoire = _dataService.fetchGrimoire;
     }],
     execute: function () {
       _createClass = function () {
@@ -39,21 +36,18 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
         };
       }();
 
-      _export('RandomCardView', RandomCardView = (_dec = inject(HttpClient), _dec(_class = function () {
-        function RandomCardView(httpClient) {
+      _export('RandomCardView', RandomCardView = function () {
+        function RandomCardView() {
           _classCallCheck(this, RandomCardView);
 
           this.themes = null;
           this.card = null;
           this.cardName = '';
           this.themeName = '';
-          this.http = null;
           this.bar = null;
           this.color = '#c3c3c3';
           this.shareHref = encodeURIComponent(window.location.href);
           this.timerPlaying = true;
-
-          this.http = httpClient;
         }
 
         RandomCardView.prototype.attached = function attached() {
@@ -64,13 +58,10 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
           }
 
           var storedPlaying = localStorage.getItem("rdgTimerPlaying");
-          this.http.fetch('data/grimoire.json').then(function (response) {
-            return response.json();
-          }).then(function (themeData) {
-            _this.themes = themeData.Response.themeCollection;
+
+          fetchGrimoire().then(function (themeData) {
+            _this.themes = themeData;
             _this.updateCard();
-          }).catch(function (error) {
-            console.error(error);
           });
         };
 
@@ -184,7 +175,7 @@ System.register(['progressbar.js', 'aurelia-framework', 'aurelia-fetch-client'],
         }]);
 
         return RandomCardView;
-      }()) || _class));
+      }());
 
       _export('RandomCardView', RandomCardView);
     }

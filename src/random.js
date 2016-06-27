@@ -1,29 +1,17 @@
 import ProgressBar from 'progressbar.js';
-import {
-  inject
-}
-from 'aurelia-framework';
-import {
-  HttpClient, json
-}
-from 'aurelia-fetch-client';
+import { fetchGrimoire } from './data-service';
 
-@
-inject(HttpClient)
 export class RandomCardView {
 
-  themes = null;
-  card = null;
-  cardName = '';
-  themeName = '';
-  http = null;
-  bar = null;
-  color = '#c3c3c3';
-  shareHref = encodeURIComponent(window.location.href);
-  timerPlaying = true;
-
-  constructor(httpClient) {
-    this.http = httpClient;
+  constructor() {
+    this.themes = null;
+    this.card = null;
+    this.cardName = '';
+    this.themeName = '';    
+    this.bar = null;
+    this.color = '#c3c3c3';
+    this.shareHref = encodeURIComponent(window.location.href);
+    this.timerPlaying = true;
   }
 
   attached() {
@@ -33,15 +21,10 @@ export class RandomCardView {
     }
 
     var storedPlaying = localStorage.getItem("rdgTimerPlaying");
-    this.http
-      .fetch('data/grimoire.json')
-      .then(response => response.json())
-      .then(themeData => {
-        this.themes = themeData.Response.themeCollection;
+
+    fetchGrimoire().then(themeData => {
+        this.themes = themeData;
         this.updateCard();
-      })
-      .catch(error => {
-        console.error(error);
       });
   }
 
@@ -125,7 +108,7 @@ export class RandomCardView {
         this.bar.animate(0.0, {
           duration: this.bar._opts.duration * this.bar.value()
         }, function() {
-          self.updateCard()
+          self.updateCard();
         });
       }
     } else {
