@@ -1,1 +1,0 @@
-module.exports = require("npm:shifty@1.5.2/dist/shifty");
