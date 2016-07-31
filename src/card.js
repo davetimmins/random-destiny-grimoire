@@ -5,6 +5,7 @@ export class CardView {
   constructor() {
     this.card = null;
     this.cardName = '';
+    this.pageName = '';
     this.themeName = '';  
     this.color = 'footer-color-1';
     this.shareHref = '';
@@ -34,6 +35,7 @@ export class CardView {
               this.themeName = theme.themeName;
               this.card = card;
               this.cardName = card.cardName;
+              this.pageName = page.pageName;
               document.getElementById('body').className = 'color-' + card
                 .rarity;  
               this.color = 'footer-color-' + card.rarity;       
@@ -46,6 +48,10 @@ export class CardView {
   }
 
   get title() {
-    return `${this.themeName} :: ${this.cardName}`;
+    return `${this.cardName}`;
+  }
+
+  get categoryTitle() {
+    return `${this.themeName} :: ${this.pageName}`;
   }
 }

@@ -1,6 +1,7 @@
-<template bindable="headingText, imageSrc, description">
+<template bindable="headingText, headingCategory, imageSrc, intro, description">
   <div class="content">   
     <div class="row col">
+      <h2 innerhtml.bind='headingCategory'></h2>
       <h1 innerhtml.bind='headingText'></h1>
     </div>
     <div class="row">
@@ -8,6 +9,7 @@
         <img src='${imageSrc}' alt="grimoire card" />
       </div>
       <div class="col grim-text">
+        <p innerhtml.bind='intro'></p>
         <p innerhtml.bind='description'></p>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <require from="./card-detail.html"></require>
   <section class="au-animate">
-    <card-detail heading-text="${title}" image-src="https://www.bungie.net${card.highResolution.image.sheetPath}" description="${card.cardDescription}"></card-detail>
+    <card-detail heading-text="${title}" heading-category="${categoryTitle}" image-src="https://www.bungie.net${card.highResolution.image.sheetPath}" description="${card.cardDescription}" intro="${card.cardIntro}"></card-detail>
     <footer id="footer" class="${color}" style="padding-left: 0;">      
       <div class="clear text-pad">
         <a class="grey-text text-lighten-4 right" route-href="route: random;"><span class="octicon octicon-sync"></span> <span> show random card</span></a>

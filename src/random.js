@@ -7,6 +7,7 @@ export class RandomCardView {
     this.themes = null;
     this.card = null;
     this.cardName = '';
+    this.pageName = '';
     this.themeName = '';    
     this.bar = null;
     this.color = 'footer-color-1';
@@ -33,6 +34,7 @@ export class RandomCardView {
     this.themeName = theme.themeName;
     const page = theme.pageCollection[Math.floor(Math.random() * theme.pageCollection
       .length)];
+    this.pageName = page.pageName;
     this.card = page.cardCollection[Math.floor(Math.random() * page.cardCollection
       .length)];
     this.cardName = this.card.cardName;
@@ -122,6 +124,10 @@ export class RandomCardView {
   }
 
   get title() {
-    return `${this.themeName} :: ${this.cardName}`;
+    return `${this.cardName}`;
+  }
+
+  get categoryTitle() {
+    return `${this.themeName} :: ${this.pageName}`;
   }
 }
