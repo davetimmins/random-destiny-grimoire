@@ -29,7 +29,7 @@ export class RandomCardView {
 
   updateCard() {
 
-    window.scrollTo(0, 0);
+    document.getElementById('grimoire-card').scrollIntoView();
     const theme = this.themes[Math.floor(Math.random() * this.themes.length)];
     this.themeName = theme.themeName;
     const page = theme.pageCollection[Math.floor(Math.random() * theme.pageCollection

@@ -38,7 +38,8 @@ export class CardView {
               this.pageName = page.pageName;
               document.getElementById('body').className = 'color-' + card
                 .rarity;  
-              this.color = 'footer-color-' + card.rarity;       
+              this.color = 'footer-color-' + card.rarity;   
+              document.getElementById('grimoire-card').scrollIntoView();    
               break;
             }
           }
