@@ -78,6 +78,12 @@ h2 {
   border-bottom: solid 1px;
   opacity: 0.7;
 }
+h4 {
+  font-family: 'EB Garamond', sans-serif;
+  margin: 0 0 1.4em 0;
+  padding: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -111,11 +117,6 @@ img {
 p {
   margin: 0;
 }
-
-b {
-  margin: 0 0 1.4em 0;
-}
-
 
 .clear {
   clear: both;
