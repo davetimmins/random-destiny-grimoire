@@ -109,8 +109,13 @@ img {
 }
 
 p {
+  margin: 0;
+}
+
+b {
   margin: 0 0 1.4em 0;
 }
+
 
 .clear {
   clear: both;
