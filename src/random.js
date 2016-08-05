@@ -42,7 +42,8 @@ export class RandomCardView {
     document.getElementById('body').className = 'color-' + this.card.rarity;
     this.color = 'footer-color-' + this.card.rarity;   
 
-    var secs = Math.max((this.card.cardDescription.split(" ").length / 200) *
+    var introLength = this.card.cardIntro === undefined || this.card.cardIntro === null ? 0 : this.card.cardIntro.split(" ").length;
+    var secs = Math.max(((this.card.cardDescription.split(" ").length + introLength) / 200) *
       60, 10);
 
     if (this.bar !== null) {
