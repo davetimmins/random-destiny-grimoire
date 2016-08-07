@@ -273,3 +273,38 @@ footer.page-footer .footer-copyright {
     line-height: 50px;
     background-color: rgba(51, 51, 51, 0.1);
 }
+
+.octicon-sync { 
+  -webkit-transition: 0.6s ease-out;
+  -moz-transition:  0.6s ease-out;
+  transition:  0.6s ease-out;
+}
+
+a:hover .octicon-sync {
+  -webkit-transform: rotateZ(720deg);
+  -moz-transform: rotateZ(720deg);
+  transform: rotateZ(720deg);
+}
+
+.octicon-bookmark { 
+  -webkit-transition: 0.6s ease-out;
+  -moz-transition:  0.6s ease-out;
+  transition:  0.6s ease-out;
+}
+
+a:hover .octicon-bookmark {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+a img {
+  opacity: 0.75;
+  -webkit-transition: 0.6s ease-out;
+  -moz-transition:  0.6s ease-out;
+  transition:  0.6s ease-out;
+}
+
+a:hover img {
+  opacity: 1.0;
+}
