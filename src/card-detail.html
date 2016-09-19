@@ -1,4 +1,4 @@
-<template bindable="headingText, headingCategory, imageSrc, intro, description">
+<template bindable="headingText, headingCategory, imageSrc, intro, introAttribution, description">
   <div id='grimoire-card' class="content">   
     <div class="row col">
       <h2 innerhtml='${headingCategory}'></h2>
@@ -10,7 +10,8 @@
       </div>
       <div class="col grim-text">
         <h4 if.bind="intro" innerhtml='${intro}'></h4>
-        <p innerhtml='${description}'></p>
+        <h5 if.bind="introAttribution" innerhtml='${introAttribution}'></h5>
+        <p if.bind="description" innerhtml='${description}'></p>
       </div>
     </div>
   </div>    
