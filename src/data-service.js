@@ -2,7 +2,7 @@ import { HttpClient } from 'aurelia-fetch-client';
 
 export function fetchGrimoire() {
 
-  if (localStorage.grimoireVersion && localStorage.grimoireVersion == "5" && localStorage.grimoire) {
+  if (localStorage.grimoireVersion && localStorage.grimoireVersion == "6" && localStorage.grimoire) {
 
     return new Promise(function(resolve, reject) {
         resolve(JSON.parse(localStorage.grimoire))
@@ -14,7 +14,7 @@ export function fetchGrimoire() {
       .fetch('data/grimoire.json')
       .then(response => response.json())
       .then(themeData => {
-        localStorage.setItem("grimoireVersion", "5");
+        localStorage.setItem("grimoireVersion", "6"); // 800454
         localStorage.setItem("grimoire", JSON.stringify(themeData.Response.themeCollection));
         return themeData.Response.themeCollection;
       })
