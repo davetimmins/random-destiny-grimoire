@@ -8,6 +8,14 @@ Promise.config({
   }
 });
 
+
+var host = "davetimmins.com";
+
+if ((host == window.location.host) && (window.location.protocol != "https:")) {
+
+  window.location.protocol = "https";
+}
+
 export function configure(aurelia) {
   aurelia.use
     .standardConfiguration()
