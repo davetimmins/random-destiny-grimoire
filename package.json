@@ -1,6 +1,6 @@
 {
   "name": "random-destiny-grimoire",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A random site full of Destiny lore for you to peruse in the form of grimoire cards.",
   "keywords": [
     "destiny",
@@ -12,7 +12,7 @@
     "url": "https://github.com/davetimmins/random-destiny-grimoire/issues"
   },
   "private": true,
-  "author": "Dave Timmins <dwtimmins@outlook.com> (http://davetimmins.com/)",
+  "author": "Dave Timmins <dwtimmins@outlook.com> (https://davetimmins.com/)",
   "repository": {
     "type": "git",
     "url": "https://github.com/davetimmins/random-destiny-grimoire"
